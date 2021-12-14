@@ -11,6 +11,8 @@ $con=mysqli_connect("$servername","$root","$pass","$db");
 
 session_start();
 
+/* TEST */
+
 if(isset($_SESSION['user_email']))
 {
     $ser=$_SESSION['user_email'];
