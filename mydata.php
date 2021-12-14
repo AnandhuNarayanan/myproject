@@ -7,8 +7,6 @@ $root="myproject";
 $pass="myproject123";
 $db="myproject";
 
-/* TEST */
-
 $con=mysqli_connect("$servername","$root","$pass","$db");
 
 session_start();
