@@ -1,9 +1,11 @@
 <html>
+<a href="index.html">HOME</a>
     <body>
         <form action="" method="post">
         USERNAME<input type="text" name="uname" placeholder="Enter your email"><br>
         PASSWORD<input type="password" name="pass" placeholder="Enter your password"><br>
         <input type="submit" value="LOGIN">
+        
         </form>
     </body>
 <?php
@@ -26,12 +28,15 @@ $sql="select * from tbl_user where email='$username' AND password='$pswd'";
 $res= mysqli_query($con,$sql);
 if(mysqli_num_rows($res))
 {
-    $result= mysqli_fetch_all($res);
-    $_SESSION['user_name']=$username;
-    if(isset($_SESSION['user_name']))
+    $result= mysqli_fetch_all($res,MYSQLI_ASSOC);
+    $_SESSION['user_mob']=$result[0]['mobile'];
+    $_SESSION['user_email']=$username;
+    $_SESSION['user_name']=$result[0]['name'];
+
+    if(isset($_SESSION['user_email']))
     {
     
-    $_SESSION['name']=$result[0]['mobile'];
+    
 
    header("Location:profile.php");
     }

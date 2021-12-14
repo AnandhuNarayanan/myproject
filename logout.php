@@ -1,17 +1,17 @@
-<html>
-    <body>
-        <form action ="" method="post">
-            <input type="submit" name="logout" value="logout">
-        </form>
+
 
 <?php
+$servername="localhost";
+$root="myproject";
+$pass="myproject123";
+$db="myproject";
+
+$con=mysqli_connect("$servername","$root","$pass","$db");
 session_start();
 if(isset($_POST['logout']))
 {
 unset($_SESSION['user_name']);
 session_destroy();
-header("location:login.php");
+header("location:index.html");
 }
 ?>
-    </body>
-</html>
