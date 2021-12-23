@@ -11,13 +11,13 @@
         session_start();
         if(isset($_SESSION['user_email']))
         {
-            echo "WELCOME";
+            echo "WELCOME  ";
             echo $_SESSION['user_name'];
             echo "<br>";
-            echo "YOUR MOBILE NUMBER is";
+            echo "YOUR MOBILE NUMBER is  ";
             echo $_SESSION['user_mob'];
             echo "<br>";
-            echo "YOUR EMAIL ID is";
+            echo "YOUR EMAIL ID is  ";
             echo $_SESSION['user_email'];
             echo "<br>";
             ?>
