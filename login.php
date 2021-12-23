@@ -7,7 +7,7 @@
         <input type="submit" value="LOGIN">
         
         </form>
-    </body>
+    
 <?php
 $servername="localhost";
 $root="myproject";
@@ -51,4 +51,6 @@ else{
 }
 
 ?>
+</body>
+
 </html>
