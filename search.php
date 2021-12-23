@@ -8,7 +8,7 @@
     
     ?>
     <body>
-        <form action="" method="post">
+        <form action="" method="get">
             <label for="search">SELECT A GROUP</label>
             <select name= "search" id="search">
 <option value="blood" >BLOODGROUP</option>
@@ -19,6 +19,7 @@
 </select>
 <input type="text" name= "key" placeholder="search">
 <input type="submit" value="SEARCH">
+
         </form>
 <?php
 $servername="localhost";
@@ -28,46 +29,48 @@ $db="myproject";
 
 $con=mysqli_connect("$servername","$root","$pass","$db");
 
-if(isset($_POST['search']))
+
+include 'function.php';
+
+if(isset($_GET['search']))
 {
+    $search=$_GET['search'];
+    $key=$_GET['key'];
 
-$search=$_POST['search'];
-$key=$_POST['key'];
 
-if($search=="blood")
+if(isset($_GET['search']))
 {
+    $ser="?search=".urlencode($_GET['search']) ."&key=".urlencode($_GET['key']);
+    $raw=search_donar($_GET['search'],$_GET['key'],$_GET['sort']);
+    var_dump($_GET['sort']);
+    
 
-$sql="select * from tbl_user where blood='$key'"; 
-$res=mysqli_query($con,$sql);
-}
-elseif($search=="place")
-{
-$sql="select * from tbl_user where place='$key'"; 
-$res=mysqli_query($con,$sql);
-}
-else{
-    $sql="select * from tbl_user where mobile='$key'"; 
-$res=mysqli_query($con,$sql);
-}
 
+   
 ?>
+
+
 <table border=1>
     <thead>
+    <thead>
+
 <tr>
-    <th>name</th>
-    <th>email</th>
-    <th>place</th>
-    <th>age</th>
-    <th>mobile</th>
-    <th>bloodgroup</th>
+    <th><a href="<?= $ser ?>&sort=NAME">NAME</a></th>
+    <th><a href="<?= $ser ?>&sort=EMAIL">EMAIL</a></th>
+    <th><a href="<?= $ser ?>&sort=PLACE">PLACE</a></th>
+    <th><a href="<?= $ser ?>&sort=AGE">AGE</a></th>
+    <th><a href="<?= $ser ?>&sort=MOBILE">MOBILE</a></th>
+    <th><a href="<?= $ser ?>&sort=BLOOD">BLOODGROUP</a></th>
 </tr>
 
-    </thead>
-    <tbody>
+</thead>
 
+<tbody>
 <?php
-$result=mysqli_fetch_all($res,MYSQLI_ASSOC);
-foreach($result as $row)
+
+
+
+foreach($raw as $row)
 {
     ?>
 
@@ -82,15 +85,21 @@ foreach($result as $row)
     </tr>
     <?php
     }
-}
-    ?>
-    </tbody>
 
+    
+}
+//}
+    
+?>
 </table>
-  <?php
+<?php
+
+        }
+    }
 
 
-}
+
+    
 
 else
 {
@@ -105,6 +114,7 @@ else
     
         header("Location:login.php");
     }
+
 
 ?>
 
