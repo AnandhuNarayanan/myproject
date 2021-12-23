@@ -1,5 +1,6 @@
 <html>
     <a href="profile.php">profile</a>
+    <a href="editprofile.php">edit profile</a>
     <body>
 <?php
 $servername="localhost";
