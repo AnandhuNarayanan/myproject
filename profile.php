@@ -20,6 +20,7 @@
             echo "YOUR EMAIL ID is  ";
             echo $_SESSION['user_email'];
             echo "<br>";
+           
             ?>
             
              
