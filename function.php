@@ -15,21 +15,24 @@ $db="myproject";
 
 function search_donar($column,$value,$sortcolumn=NULL)
 {
+    $today=date("Y-m-d", (time() - 60*60*24*90));
+   // echo $today;
 if($column=="blood")
 {
 
-$sql="select * from tbl_user where blood='$value' "; 
+$sql="SELECT * from tbl_user where blood='$value' AND `donationdate` <= '$today'" ; 
 
 }
-elseif($column=="place")
+else if($column=="place")
 {
-$sql="select * from tbl_user where place='$value' "; 
+$sql="SELECT * from tbl_user where place='$value'  AND `donationdate` <= '$today'"; 
 
 }
 else
 {
-    $sql="select * from tbl_user where mobile='$value'"; 
+    $sql="SELECT * from `tbl_user` where `mobile`='$value' AND `donationdate` <= '$today'"; 
 }
+
 if(isset($sortcolumn))
 {
     $sql=$sql. "ORDER BY $sortcolumn";
