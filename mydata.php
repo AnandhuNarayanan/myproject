@@ -1,6 +1,8 @@
 <html>
     <a href="profile.php">profile</a>
     <a href="editprofile.php">edit profile</a>
+    <a href="update.php">Update Last Donation</a>
+
     <body>
 <?php
 $servername="localhost";
