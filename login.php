@@ -29,6 +29,7 @@ $res= mysqli_query($con,$sql);
 if(mysqli_num_rows($res))
 {
     $result= mysqli_fetch_all($res,MYSQLI_ASSOC);
+    $_SESSION['user_id']=$result[0]['id'];
     $_SESSION['user_mob']=$result[0]['mobile'];
     $_SESSION['user_email']=$username;
     $_SESSION['user_name']=$result[0]['name'];
