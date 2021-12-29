@@ -1,12 +1,41 @@
 <html>
-<a href="index.html">HOME</a>
+<head>
+        <style>
+            body{
+                background-image:url('images/image1.jpg') ;
+            
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: white;
+                text-align: center;
+            }
+            h2{
+                color: rgb(250, 113, 21);
+                text-align: center;
+            }
+            a:link {
+                color: rgb(248, 245, 245);
+            }
+            a:visited {
+            color: red;
+            }
+        </style>
+    </head>
+    <h1>USER LOGIN PAGE</h1>
+<h2><a href="index.html">HOME</a></h2>
     <body>
-        <form action="" method="post">
-        USERNAME<input type="text" name="uname" placeholder="Enter your email"><br>
-        PASSWORD<input type="password" name="pass" placeholder="Enter your password"><br>
-        <input type="submit" value="LOGIN">
+       <h4> <form action="" method="post">
+        USERNAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="uname" placeholder="Enter your email"><br><br>
+        PASSWORD&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="password" name="pass" placeholder="Enter your password"><br>
+        <br><input type="submit" value="LOGIN">
         
-        </form>
+        </form></h4>
     
 <?php
 $servername="localhost";

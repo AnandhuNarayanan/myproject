@@ -1,12 +1,45 @@
 <html>
-<a href="profile.php">profile</a>
+<style>
+            body{
+                background-image:url('images/image1.jpg') ;
+            
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: black;
+                text-align: center;
+            }
+            h2{
+                color:black;
+                text-align: center;
+            }
+            h3{
+                color:white;
+                text-align: center;
+            }
+            a:link {
+                color: rgb(248, 245, 245);
+            }
+            a:visited {
+            color: rgb(252, 80, 13);
+            }
+        </style>
+        </head>
+        <h1>CHANGE YOUR PASSWORD</h1>
+<h2><a href="profile.php">profile</a></h2>
     <body>
-<form action="" method="post">
+        
+<h3><form action="" method="post">
   OLD PASSWORD  <input type="password" name="opass" placeholder="enter old password"><br>
     NEW PASSWORD<input type="password" name="npass" placeholder="enter new password"><br>
    RE-ENTER NEW PASSWORD <input type="password" name="cpass" placeholder="confirm new password">
    <input type="submit" value="change">
-</form>
+</form><h3>
 
 
         <?php
@@ -19,6 +52,7 @@
         session_start();
         if($_SESSION['user_email'])
         {
+            
             $mobile=$_SESSION['user_mob'];
            // var_dump($mobile);
            $email=$_SESSION['user_email'];
@@ -43,7 +77,7 @@
                     }
                     else
                     {
-                        echo"cheeti pooi";
+                        echo"error";
                     }
                 }
                 

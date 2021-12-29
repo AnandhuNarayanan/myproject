@@ -1,5 +1,28 @@
 <html>
+    <head>
+<style>
+            body{
+                background-image:url('images/image1.jpg') ;
+            
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: black;
+                text-align: center;
+            }
+            h2{
+                color:white;
+                text-align: center;
+            }
+        </style>
+        </head>
     <body>
+        <h1></h1>
         <form action="" method="post">
         <input type="submit" name="logout" value="LOGOUT">
         <input type="submit" name="pro" value="PROFILE">
@@ -11,9 +34,10 @@
         session_start();
         if(isset($_SESSION['user_email']))
         {
-            echo "WELCOME  ";
-            echo $_SESSION['user_name'];
-            echo "<br>";
+            ?>
+           <h1> <?php echo "WELCOME  ";
+            echo $_SESSION['user_name'];?></h1>
+            <h2><?php echo "<br>";
             echo "YOUR MOBILE NUMBER is  ";
             echo $_SESSION['user_mob'];
             echo "<br>";
@@ -21,7 +45,7 @@
             echo $_SESSION['user_email'];
             echo "<br>";
            
-            ?>
+            ?></h2>
             
              
              <?php

@@ -1,10 +1,42 @@
 <html>
-<a href="profile.php"> profile</a>
+<head>
+<style>
+            body{
+                background-image:url('images/image1.jpg') ;
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: black;
+                text-align: center;
+            }
+            h2{
+                color:black;
+                text-align: center;
+            }
+            h3{
+                color:white;
+                text-align: center;
+            }
+            a:link {
+                color: rgb(248, 245, 245);
+            }
+            a:visited {
+            color: rgb(252, 80, 13);
+            }
+        </style>
+        </head>
+        <h1>UPDATE LAST DONATED DETAILS</h1>
+<h2><a href="profile.php"> profile</a></h2>
     <body>
-        <form action="" method ="post">
+        <h3><form action="" method ="post">
             ENTER PREVIOUS DONATED DATE<input type="date" name="date" >
             <input type="submit" value="UPDATE">
-        </form>
+        </form></h3>
 
 <?php
 $servername="localhost";

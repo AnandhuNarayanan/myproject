@@ -1,5 +1,43 @@
 <html>
-<a href="profile.php">profile</a>
+<head>
+<style>
+            body{
+                background-image:url('images/image1.jpg') ;
+            
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: black;
+                text-align: center;
+            }
+            h2{
+                color:black;
+                text-align: center;
+            }
+            h3{
+                color:white;
+                text-align: center;
+            }
+            a:link {
+                color: rgb(248, 245, 245);
+            }
+            a:visited {
+            color: rgb(252, 80, 13);
+            }
+            table{
+                font-size: 20px;
+                color:white;
+                border-color: orange;
+            }
+        </style>
+        </head>
+        <h1> SEARCH DONORS</h1>
+<h2><a href="profile.php">profile</a><h2>
     <?php
     session_start();
     if(isset($_SESSION['user_name']))
@@ -8,19 +46,17 @@
     
     ?>
     <body>
-        <form action="" method="get">
+       <h3> <form action="" method="get">
             <label for="search">SELECT A GROUP</label>
             <select name= "search" id="search">
-<option value="blood" >BLOODGROUP</option>
+<option value="blood" >BLOODGROUP</option>>
 <option value="place" >PLACE</option>
-<option value="mobile" >MOBILE</option>
-
 
 </select>
 <input type="text" name= "key" placeholder="search">
 <input type="submit" value="SEARCH">
 
-        </form>
+        </form></h3>
 <?php
 $servername="localhost";
 $root="myproject";
@@ -42,7 +78,7 @@ if(isset($_GET['search']))
 {
     $ser="?search=".urlencode($_GET['search']) ."&key=".urlencode($_GET['key']);
     $raw=search_donar($_GET['search'],$_GET['key'],$_GET['sort']);
-    var_dump($_GET['sort']);
+  //  var_dump($_GET['sort']);
     
 
 
@@ -50,7 +86,7 @@ if(isset($_GET['search']))
 ?>
 
 
-<table border=1>
+<table align= center border=1>
     <thead>
     <thead>
 

@@ -1,6 +1,42 @@
 <html>
-<a href="profile.php">profile</a>
-<a href="change.php">change password</a>
+<head>
+<style>
+            body{
+                
+        
+                background-image:url('images/image1.jpg') ;
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: black;
+                text-align: center;
+            }
+            h2{
+                color:black;
+                text-align: center;
+            }
+            h3{
+                color:white;
+                text-align: center;
+            }
+            a:link {
+                
+                color: rgb(248, 245, 245);
+            }
+            a:visited {
+                
+            color: red;
+            }
+        </style>
+        </head>
+        <h1>EDIT YOUR DETAILS</h1>
+<h2><a href="profile.php">profile</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="change.php">change password</a></h2>
 
     <body>
         <?php
@@ -19,10 +55,10 @@ $con=mysqli_connect("$servername","$root","$pass","$db");
             $email=$_SESSION['user_email'];
             
         ?>
-        <form action="" method="post">
-        NAME<input type="text" name="name" placeholder="Enter your new name" required><br>
-            <input type="submit" value="UPDATE">
-        </form>
+        <h3><form action="" method="post">
+        NAME&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Enter your new name" required><br>
+            <br><input type="submit" value="UPDATE">
+        </form></h3>
         
         <?php
         if(isset($_POST['name']))

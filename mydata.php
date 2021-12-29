@@ -1,7 +1,45 @@
 <html>
-    <a href="profile.php">profile</a>
-    <a href="editprofile.php">edit profile</a>
-    <a href="update.php">Update Last Donation</a>
+<head>
+<style>
+            body{
+                background-image:url('images/image1.jpg') ;
+               
+            }
+            h1{
+               
+                font-size: 70px;
+                color:white;
+                text-align: center;
+            }
+            h4{
+                color: black;
+                text-align: center;
+            }
+            h2{
+                color:black;
+                text-align: center;
+            }
+            h3{
+                color:black;
+                text-align: center;
+            }
+            a:link {
+                color: rgb(248, 245, 245);
+            }
+            a:visited {
+            color: rgb(252, 80, 13);
+            }
+            table{
+                font-size: 20px;
+                color:white;
+                border-color: orange;
+            }
+        </style>
+        </head>
+        <h1>YOUR DETAILS</h1>
+   <h2> <a href="profile.php">profile</a>&nbsp;&nbsp;
+    <a href="editprofile.php">edit profile</a>&nbsp;&nbsp;
+    <a href="update.php">Update Last Donation</a></h2>
 
     <body>
 <?php
@@ -26,7 +64,8 @@ if(isset($_SESSION['user_email']))
     {
         
         ?>
-        <table border=1>
+        
+        <table align= center  border=1>
 <thead>
     <tr>
         <th>NAME</th>
