@@ -27,6 +27,7 @@
         <input type="submit" name="logout" value="LOGOUT">
         <input type="submit" name="pro" value="PROFILE">
         <input type="submit" name="search" value="SEARCH">
+        <img src= 'images/'>;
             
         </form>
         <?php
