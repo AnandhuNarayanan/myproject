@@ -36,7 +36,8 @@
         </head>
         <h1>EDIT YOUR DETAILS</h1>
 <h2><a href="profile.php">profile</a>&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="change.php">change password</a></h2>
+<a href="change.php">change password</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="propic.php">change profile picure</a></h2>
 
     <body>
         <?php
