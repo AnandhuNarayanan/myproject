@@ -38,16 +38,19 @@
         </form></h4>
     
 <?php
-$servername="localhost";
-$root="myproject";
-$pass="myproject123";
-$db="myproject";
 if(isset($_POST['uname']))
 {
 $username=$_POST['uname'];
 $pswd=$_POST['pass'];
+include "connection.php";
 
-$con=mysqli_connect("$servername","$root","$pass","$db");
+/*$servername="localhost";
+$root="myproject";
+$pass="myproject123";
+$db="myproject";
+
+
+$con=mysqli_connect("$servername","$root","$pass","$db");*/
 
 session_start();
 
