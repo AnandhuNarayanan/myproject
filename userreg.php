@@ -116,7 +116,7 @@ else
 }
 else
 {
-    echo "password you given is dismatch";
+    echo "password you given is mismatch";
 }
 }
 
